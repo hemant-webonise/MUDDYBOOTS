@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="MUDDYBOOTS.Pages.DetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MUDDYBOOTS.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"  
+    mc:Ignorable="d">
+
+    <StackPanel Margin="10,0,0,10">
+        <Slider  Minimum="1" Maximum="20" Header="ZoomLevel" Name="zoomSlider" Value="12"/>
+        <maps:MapControl
+           
+            x:Name="myMap" 
+            ZoomLevel="{Binding ElementName=zoomSlider,Path=Value, Mode=TwoWay}"                                    
+            Height="700"
+            Width="500"
+            HorizontalAlignment="Left"
+            />
+
+    </StackPanel>
+</Page>

@@ -10,7 +10,7 @@ namespace MUDDYBOOTS
     {
         public const string AndroidHiveFake = "http://api.androidhive.info/contacts/";
         public const string stageDataMapperLogin = "http://stage.datamapper.com:80/admin/api/v1/accounts/sign_in";
-        public const string stageDataMapperSurvey = "http://stage.datamapper.com:80/api/v1/surveys";
+        public const string testDataMapperSurvey = "http://test.datamapper.com:80/api/v1/surveys";
         public const string fakeResponseSurveyString = "{" +
             "  \"surveys\": [\r\n" +
             "    {\r\n" +
