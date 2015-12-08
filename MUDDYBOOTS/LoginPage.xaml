@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="MUDDYBOOTS.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MUDDYBOOTS"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Margin="10,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock  Grid.Row="1"  HorizontalAlignment="Center" Text="Login " FontSize="48" Grid.Column="1" Margin="0,0,0,20" />
+        <TextBox Grid.Row="2"   x:Name="Username" PlaceholderText="Username" Grid.Column="1" Margin="0,0,0,10" />
+        <PasswordBox Grid.Row="3" x:Name="Password"  PlaceholderText="Password" Grid.Column="1" Margin="0,0,0,10" />
+        <Button Grid.Row="4"  x:Name="Log" Background="#FF30DABB" Grid.Column="1" Content="Login" VerticalAlignment="Center" HorizontalAlignment="Stretch" Padding="10,10,10,10" Margin="0,0,0,20" Click="Login"  />
+    </Grid>
+</Page>
