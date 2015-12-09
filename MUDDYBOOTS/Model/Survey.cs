@@ -6,6 +6,8 @@ namespace MUDDYBOOTS.Model
     public class Survey
     {
         public string title { get; set; }
+        public double latitude { get; set; }
+        public double longitude { get; set; }
 
         public string upload_date { get; set; }
         public string upload_complete_date { get; set; }
@@ -90,6 +92,9 @@ namespace MUDDYBOOTS.Model
             Status = jsonObject.GetNamedString(statusKey);
             /*Increased one element in Json update*/
             title = jsonObject.GetNamedString("title");
+            longitude = jsonObject.GetNamedNumber("longitude");
+            longitude = jsonObject.GetNamedNumber("longitude");
+
 
         }
     }

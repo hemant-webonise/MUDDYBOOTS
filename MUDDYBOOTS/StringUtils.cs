@@ -32,12 +32,16 @@ namespace MUDDYBOOTS
             "        \"id\": \"9017a354-a683-40d8-becc-dd7d5eeb981e\",\r\n" +
             "        \"name\": \"Untitled\",\r\n" +
             "        \"title\": \"Raleigh Multisprectral 200 meters\",\r\n" +
+            "        \"latitude\": 35.8439646,\r\n" +
+            "        \"longitude\": -78.7854862,\r\n" +
             "        \"status\": \"UPLOADING\"\r\n" +
             "    },\r\n" +
             "    {\r\n" +
             "        \"id\": \"505dd44d-df76-4cab-9f07-0a692f0e51e2\",\r\n" +
             "        \"name\": \"Untitled\",\r\n" +
             "        \"title\": \"Landing\",\r\n" +
+            "        \"latitude\": 35.8439646,\r\n" +
+            "        \"longitude\": -78.7854862,\r\n" +
             "        \"status\": \"UPLOADING\"\r\n" +
             "    }\r\n" +
             "  ]\r\n" +

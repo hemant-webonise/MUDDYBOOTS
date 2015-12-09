@@ -9,5 +9,7 @@ namespace MUDDYBOOTS.Model
     class Payload
     {
         public string Title { get; set; }
+        public double Longitude { get; set; }
+        public double Latitude { get; set; }
     }
 }

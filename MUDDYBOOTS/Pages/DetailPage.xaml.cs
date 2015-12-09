@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using MUDDYBOOTS.Model;
+using Windows.Devices.Geolocation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,6 +27,7 @@ namespace MUDDYBOOTS.Pages
     /// </summary>
     public sealed partial class DetailPage : Page
     {
+        Payload user;
 
         public DetailPage()
         {
@@ -41,14 +43,35 @@ namespace MUDDYBOOTS.Pages
             if (Frame.CanGoBack) Frame.GoBack();
         }
         /*To sent the value from other Page to this page while navigation*/
-        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        protected override  void OnNavigatedTo(NavigationEventArgs e)
         {
-            var user = (Payload)e.Parameter;
+             user = (Payload)e.Parameter;
             /*Check the navigated Values*/
             /*We imported System here instead of using Dispose as we did before in LOGINPAGE*/
             Title.Text = user.Title;
-            MessageDialog messageDialog = new MessageDialog(user.Title);
-            await messageDialog.ShowAsync();
+            SetMapIcons();
+        }
+
+        private void SetMapIcons()
+        {
+            // Specify a known location.
+            BasicGeoposition snPosition = new BasicGeoposition() { Latitude = user.Latitude, Longitude = user.Latitude };
+            Geopoint snPoint = new Geopoint(snPosition);
+
+            // Create a MapIcon.
+            MapIcon mapIcon1 = new MapIcon();
+            mapIcon1.Location = snPoint;
+            mapIcon1.NormalizedAnchorPoint = new Point(0.5, 1.0);
+            mapIcon1.Title = user.Title;
+            mapIcon1.ZIndex = 0;
+
+            // Add the MapIcon to the map.
+            myMap.MapElements.Add(mapIcon1);
+
+            // Center the map over the POI.
+            myMap.MapElements.Add(mapIcon1);
+            myMap.Center = snPoint;
+            myMap.ZoomLevel = 14;
 
         }
     }

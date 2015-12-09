@@ -67,6 +67,9 @@ namespace MUDDYBOOTS.Pages
            
             Payload payload = new Payload();
             payload.Title = selectedUser.title;
+            payload.Latitude = selectedUser.latitude;
+            payload.Longitude = selectedUser.longitude;
+
             Frame.Navigate(typeof(DetailPage),payload);
         }
 

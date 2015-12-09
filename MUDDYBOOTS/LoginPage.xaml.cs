@@ -18,10 +18,7 @@ namespace MUDDYBOOTS
     public sealed partial class LoginPage : Page
     {
         string Auth_token;
-        string Auth_token1;
-
-
-
+     
         public LoginPage()
         {
             this.InitializeComponent();
