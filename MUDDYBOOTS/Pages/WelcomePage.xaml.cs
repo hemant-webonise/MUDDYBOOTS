@@ -79,8 +79,8 @@ namespace MUDDYBOOTS.Pages
             value = (string)e.Parameter;
             /*Check the navigated Values*/
             /*We imported System here instead of using Dispose as we did before in LOGINPAGE*/
-            MessageDialog messageDialog = new MessageDialog(value);
-            await messageDialog.ShowAsync();
+            //MessageDialog messageDialog = new MessageDialog(value);
+            //await messageDialog.ShowAsync();
 
         }
     }

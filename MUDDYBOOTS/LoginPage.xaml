@@ -21,9 +21,9 @@
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-        <TextBlock  Grid.Row="1"  HorizontalAlignment="Center" Text="Login " FontSize="48" Grid.Column="1" Margin="0,0,0,20" />
+        <TextBlock  Grid.Row="1"  HorizontalAlignment="Center" Text="Muddy Boots " FontSize="38" Grid.Column="1" Margin="0,0,0,20" RequestedTheme="Light" FontFamily="Segoe Print" />
         <TextBox Grid.Row="2"   x:Name="Username" PlaceholderText="Username" Grid.Column="1" Margin="0,0,0,10" />
         <PasswordBox Grid.Row="3" x:Name="Password"  PlaceholderText="Password" Grid.Column="1" Margin="0,0,0,10" />
-        <Button Grid.Row="4"  x:Name="Log" Background="#FF30DABB" Grid.Column="1" Content="Login" VerticalAlignment="Center" HorizontalAlignment="Stretch" Padding="10,10,10,10" Margin="0,0,0,20" Click="Login"  />
+        <Button Grid.Row="4"  x:Name="Log" FontSize="28" Background="#FF30DABB" Grid.Column="1" Content="Login" VerticalAlignment="Center" HorizontalAlignment="Stretch" Padding="10,10,10,10" Margin="0,0,0,20" Click="Login" FontFamily="Segoe WP Black"  RequestedTheme="Dark"  />
     </Grid>
 </Page>
