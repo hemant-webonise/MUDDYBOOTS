@@ -34,7 +34,7 @@ namespace MUDDYBOOTS
 
             SuccessStatus pref = new SuccessStatus(responseLoginJSON);
             Auth_token = pref.Auth_token;
-            if (Auth_token != null)
+            if (pref.success == true)
             {
                 MessageDialog messageDialog = new MessageDialog("Login Successful");
                 await messageDialog.ShowAsync();

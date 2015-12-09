@@ -15,6 +15,7 @@ namespace MUDDYBOOTS.Model
         {
             JsonObject jsonObject = JsonObject.Parse(jsonString);
             Auth_token = jsonObject.GetNamedString(idKey, "");
+            success = jsonObject.GetNamedBoolean("success");
         }
 
         public SuccessStatus()
