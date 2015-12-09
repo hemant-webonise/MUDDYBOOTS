@@ -9,9 +9,10 @@
     mc:Ignorable="d">
 
     <StackPanel Margin="10,0,0,10">
+        <TextBlock x:Name="Title"></TextBlock>
         <Slider  Minimum="1" Maximum="20" Header="ZoomLevel" Name="zoomSlider" Value="12"/>
-        <maps:MapControl
-           
+     
+        <maps:MapControl           
             x:Name="myMap" 
             ZoomLevel="{Binding ElementName=zoomSlider,Path=Value, Mode=TwoWay}"                                    
             Height="700"

@@ -18,6 +18,9 @@ namespace MUDDYBOOTS
     public sealed partial class LoginPage : Page
     {
         string Auth_token;
+        string Auth_token1;
+
+
 
         public LoginPage()
         {
@@ -38,6 +41,7 @@ namespace MUDDYBOOTS
             {
                 MessageDialog messageDialog = new MessageDialog("Login Successful");
                 await messageDialog.ShowAsync();
+              
                 /*Token is passed*/
                 Frame.Navigate(typeof(WelcomePage), Auth_token);
             }

@@ -27,7 +27,7 @@ namespace MUDDYBOOTS.Pages
             GetResonpseFromAPI();
         }
 
-        private async void GetResonpseFromAPI()
+        private  void GetResonpseFromAPI()
         {
 
             /*
@@ -49,10 +49,11 @@ namespace MUDDYBOOTS.Pages
             */
             using (var clientWithHeader = new FlurlClient().WithHeader("AUTH_TOKEN", "JwyTmmsxVxBy1iGcuC76"))
             {
-                var responseJString = await StringUtils.testDataMapperSurvey.WithClient(clientWithHeader).GetStringAsync();/*GetJsonAsync<Users>();*/
+                //var responseJString = await StringUtils.testDataMapperSurvey.WithClient(clientWithHeader).GetStringAsync();/*GetJsonAsync<Users>();*/
+                //Change.Text = responseJString;
             }
-            DataContext = new Users(StringUtils.fakeResponseSurveyString);
-            //Change.Text = responseJString;
+            DataContext = new Users(StringUtils.fakeResponseSurveyStringUpdate);
+           
             /*
             Could be used to see JSON
             Change.Text = StringUtils.fakeResponseSurveyString;
@@ -62,7 +63,11 @@ namespace MUDDYBOOTS.Pages
 
         private void Education_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Frame.Navigate(typeof(DetailPage));
+            var selectedUser = (Survey)e.ClickedItem;
+           
+            Payload payload = new Payload();
+            payload.Title = selectedUser.title;
+            Frame.Navigate(typeof(DetailPage),payload);
         }
 
         /*To sent the value from other Page to this page while navigation*/

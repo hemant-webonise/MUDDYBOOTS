@@ -5,6 +5,8 @@ namespace MUDDYBOOTS.Model
 {
     public class Survey
     {
+        public string title { get; set; }
+
         public string upload_date { get; set; }
         public string upload_complete_date { get; set; }
         public int num_images { get; set; }
@@ -86,6 +88,8 @@ namespace MUDDYBOOTS.Model
             Id = jsonObject.GetNamedString(idKey, "");
             Name = jsonObject.GetNamedString(nameKey, "");
             Status = jsonObject.GetNamedString(statusKey);
+            /*Increased one element in Json update*/
+            title = jsonObject.GetNamedString("title");
 
         }
     }
