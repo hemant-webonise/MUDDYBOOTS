@@ -22,7 +22,7 @@
                             <ColumnDefinition Width="1*"/>                            
                         </Grid.ColumnDefinitions>
                         <StackPanel>
-                            <TextBlock Text="{Binding Path=Name, Mode=TwoWay }" 
+                            <TextBlock Text="{Binding Path=title, Mode=TwoWay }" 
                                Margin="20,0,20,8"
                                FontSize="24" 
                                FontStyle="Italic" 

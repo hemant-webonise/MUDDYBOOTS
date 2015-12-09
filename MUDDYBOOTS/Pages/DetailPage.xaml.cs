@@ -27,7 +27,7 @@ namespace MUDDYBOOTS.Pages
     /// </summary>
     public sealed partial class DetailPage : Page
     {
-        Payload user;
+        Survey user;
 
         public DetailPage()
         {
@@ -45,24 +45,24 @@ namespace MUDDYBOOTS.Pages
         /*To sent the value from other Page to this page while navigation*/
         protected override  void OnNavigatedTo(NavigationEventArgs e)
         {
-             user = (Payload)e.Parameter;
+             user = (Survey)e.Parameter;
             /*Check the navigated Values*/
             /*We imported System here instead of using Dispose as we did before in LOGINPAGE*/
-            Title.Text = user.Title;
+            Title.Text = user.title;
             SetMapIcons();
         }
 
         private void SetMapIcons()
         {
             // Specify a known location.
-            BasicGeoposition snPosition = new BasicGeoposition() { Latitude = user.Latitude, Longitude = user.Latitude };
+            BasicGeoposition snPosition = new BasicGeoposition() { Latitude = user.latitude, Longitude = user.longitude };
             Geopoint snPoint = new Geopoint(snPosition);
 
             // Create a MapIcon.
             MapIcon mapIcon1 = new MapIcon();
             mapIcon1.Location = snPoint;
             mapIcon1.NormalizedAnchorPoint = new Point(0.5, 1.0);
-            mapIcon1.Title = user.Title;
+            mapIcon1.Title = user.title;
             mapIcon1.ZIndex = 0;
 
             // Add the MapIcon to the map.

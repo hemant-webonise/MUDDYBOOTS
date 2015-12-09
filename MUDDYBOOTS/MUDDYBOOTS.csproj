@@ -102,7 +102,6 @@
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Payload.cs" />
     <Compile Include="Model\SuccessStatus.cs" />
     <Compile Include="Model\Survey.cs" />
     <Compile Include="Model\Users.cs" />

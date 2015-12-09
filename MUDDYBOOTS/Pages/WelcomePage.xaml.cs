@@ -63,18 +63,13 @@ namespace MUDDYBOOTS.Pages
 
         private void Education_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var selectedUser = (Survey)e.ClickedItem;
-           
-            Payload payload = new Payload();
-            payload.Title = selectedUser.title;
-            payload.Latitude = selectedUser.latitude;
-            payload.Longitude = selectedUser.longitude;
+            Survey selectedUser = (Survey)e.ClickedItem;  
 
-            Frame.Navigate(typeof(DetailPage),payload);
+            Frame.Navigate(typeof(DetailPage), selectedUser);
         }
 
         /*To sent the value from other Page to this page while navigation*/
-        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        protected override  void OnNavigatedTo(NavigationEventArgs e)
         {
             value = (string)e.Parameter;
             /*Check the navigated Values*/
