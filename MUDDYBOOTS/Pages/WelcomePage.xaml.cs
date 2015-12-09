@@ -5,6 +5,9 @@ using Windows.UI.Xaml.Navigation;
 using System;
 using MUDDYBOOTS.Model;
 using Flurl.Http;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -26,12 +29,30 @@ namespace MUDDYBOOTS.Pages
 
         private async void GetResonpseFromAPI()
         {
+
+            /*
+            HTTPCLIENT Attemp
+            */
+            /*HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(StringUtils.testDataMapperSurvey);            
+            client.DefaultRequestHeaders.TryAddWithoutValidation("Content-Type", "application/json; charset=utf-8");
+
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, "AUTH_TOKEN");
+            request.Content = new StringContent("{\"name\":\"John Doe\",\"age\":33}", Encoding.UTF8, "application/json");
+            await client.SendAsync(request)
+                              .ContinueWith(responseTask =>
+                              {
+                                  Change.Text = responseTask.Result.ToString();
+                              });*/
             /*
             replaced value - JwyTmmsxVxBy1iGcuC76 for stagging
             */
-            var responseJString = await StringUtils.testDataMapperSurvey.WithHeader("AUTH_TOKEN", value).GetStringAsync();
+            using (var clientWithHeader = new FlurlClient().WithHeader("AUTH_TOKEN", "JwyTmmsxVxBy1iGcuC76"))
+            {
+                var responseJString = await StringUtils.testDataMapperSurvey.WithClient(clientWithHeader).GetStringAsync();/*GetJsonAsync<Users>();*/
+            }
             DataContext = new Users(StringUtils.fakeResponseSurveyString);
-            Change.Text = responseJString;
+            //Change.Text = responseJString;
             /*
             Could be used to see JSON
             Change.Text = StringUtils.fakeResponseSurveyString;
