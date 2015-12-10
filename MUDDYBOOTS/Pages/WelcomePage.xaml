@@ -9,11 +9,21 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"  Margin="10,0,0,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />            
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="10*" />            
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
+        <TextBlock
+            Text="Survey's List"
+            Margin="20,0,20,8"
+            FontSize="24" 
+            FontStyle="Italic" 
+            FontWeight="SemiBold"
+            Foreground="DarkBlue"
+        
+            >
+        </TextBlock>       
         <ListView x:Name="Education" Grid.Row="1" ItemsSource="{Binding Path=Survey, Mode=TwoWay}"  SelectionMode="Single" IsItemClickEnabled="True" ItemClick="Education_ItemClick" >
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -34,8 +44,9 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+       
         <!--Could be used for seeing the JSON-->
-        <TextBlock x:Name="Change"></TextBlock>
+        <!--<TextBlock x:Name="Change"></TextBlock>-->
 
 
     </Grid>

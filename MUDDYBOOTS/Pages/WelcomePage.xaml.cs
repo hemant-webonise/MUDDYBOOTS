@@ -8,6 +8,7 @@ using Flurl.Http;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using Windows.UI.Xaml;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -23,27 +24,12 @@ namespace MUDDYBOOTS.Pages
 
         public WelcomePage()
         {
-            this.InitializeComponent();
+            this.InitializeComponent();           
             GetResonpseFromAPI();
         }
-
+      
         private  void GetResonpseFromAPI()
-        {
-
-            /*
-            HTTPCLIENT Attemp
-            */
-            /*HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(StringUtils.testDataMapperSurvey);            
-            client.DefaultRequestHeaders.TryAddWithoutValidation("Content-Type", "application/json; charset=utf-8");
-
-            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, "AUTH_TOKEN");
-            request.Content = new StringContent("{\"name\":\"John Doe\",\"age\":33}", Encoding.UTF8, "application/json");
-            await client.SendAsync(request)
-                              .ContinueWith(responseTask =>
-                              {
-                                  Change.Text = responseTask.Result.ToString();
-                              });*/
+        {          
             /*
             replaced value - JwyTmmsxVxBy1iGcuC76 for stagging
             */
@@ -53,7 +39,6 @@ namespace MUDDYBOOTS.Pages
                 //Change.Text = responseJString;
             }
             DataContext = new Users(StringUtils.fakeResponseSurveyStringUpdate);
-           
             /*
             Could be used to see JSON
             Change.Text = StringUtils.fakeResponseSurveyString;
@@ -64,19 +49,14 @@ namespace MUDDYBOOTS.Pages
         private void Education_ItemClick(object sender, ItemClickEventArgs e)
         {
             Survey selectedUser = (Survey)e.ClickedItem;  
-
             Frame.Navigate(typeof(DetailPage), selectedUser);
         }
+        
 
         /*To sent the value from other Page to this page while navigation*/
         protected override  void OnNavigatedTo(NavigationEventArgs e)
         {
             value = (string)e.Parameter;
-            /*Check the navigated Values*/
-            /*We imported System here instead of using Dispose as we did before in LOGINPAGE*/
-            //MessageDialog messageDialog = new MessageDialog(value);
-            //await messageDialog.ShowAsync();
-
         }
     }
 }

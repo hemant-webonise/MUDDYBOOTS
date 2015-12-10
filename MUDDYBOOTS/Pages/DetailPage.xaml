@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <StackPanel Margin="10,0,0,10">
-        <TextBlock x:Name="Title" HorizontalAlignment="Center" Text="Login " FontSize="28" Grid.Column="1" Margin="0,0,0,20" RequestedTheme="Light" FontFamily="Segoe Print" ></TextBlock>
+        <TextBlock x:Name="Title" HorizontalAlignment="Center" Text="Login " FontSize="28"  Margin="0,0,0,20" RequestedTheme="Light" FontFamily="Segoe Print" ></TextBlock>
         <Slider  Minimum="1"  FontFamily="Segoe Print" Maximum="20" Header="ZoomLevel" Name="zoomSlider" Value="12"/>
      
         <maps:MapControl  

@@ -40,7 +40,9 @@ namespace MUDDYBOOTS.Pages
         }
         private void backButton_Tapped(object sender, BackRequestedEventArgs e)
         {
-            if (Frame.CanGoBack) Frame.GoBack();
+            var currentView = SystemNavigationManager.GetForCurrentView();
+            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+            if (Frame.CanGoBack) Frame.Navigate(typeof(WelcomePage));
         }
         /*To sent the value from other Page to this page while navigation*/
         protected override  void OnNavigatedTo(NavigationEventArgs e)
@@ -59,19 +61,15 @@ namespace MUDDYBOOTS.Pages
             Geopoint snPoint = new Geopoint(snPosition);
 
             // Create a MapIcon.
-            MapIcon mapIcon1 = new MapIcon();
-            mapIcon1.Location = snPoint;
-            mapIcon1.NormalizedAnchorPoint = new Point(0.5, 1.0);
-            mapIcon1.Title = user.title;
-            mapIcon1.ZIndex = 0;
-
-            // Add the MapIcon to the map.
-            myMap.MapElements.Add(mapIcon1);
-
+            MapIcon POI = new MapIcon();
+            POI.Location = snPoint;
+            POI.NormalizedAnchorPoint = new Point(0.5, 1.0);
+            POI.Title = user.title;
+            POI.ZIndex = 0;           
             // Center the map over the POI.
-            myMap.MapElements.Add(mapIcon1);
+            myMap.MapElements.Add(POI);
             myMap.Center = snPoint;
-            myMap.ZoomLevel = 14;
+            myMap.ZoomLevel = 4;
 
         }
     }
