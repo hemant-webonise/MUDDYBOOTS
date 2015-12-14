@@ -39,6 +39,54 @@ namespace MUDDYBOOTS
             "    {\r\n" +
             "        \"id\": \"505dd44d-df76-4cab-9f07-0a692f0e51e2\",\r\n" +
             "        \"name\": \"Untitled\",\r\n" +
+            "        \"title\": \"New York\",\r\n" +
+            "        \"latitude\": 35.8439646,\r\n" +
+            "        \"longitude\": -78.7854862,\r\n" +
+            "        \"status\": \"UPLOADING\"\r\n" +
+            "    },\r\n" +
+            "    {\r\n" +
+            "        \"id\": \"505dd44d-df76-4cab-9f07-0a692f0e51e2\",\r\n" +
+            "        \"name\": \"Untitled\",\r\n" +
+            "        \"title\": \"New Jersey\",\r\n" +
+            "        \"latitude\": 40.725581,\r\n" +
+            "        \"longitude\": -73.998078,\r\n" +
+            "        \"status\": \"UPLOADING\"\r\n" +
+            "    },\r\n" +
+            "    {\r\n" +
+            "        \"id\": \"505dd44d-df76-4cab-9f07-0a692f0e51e2\",\r\n" +
+            "        \"name\": \"Untitled\",\r\n" +
+            "        \"title\": \"30 Broad St, New York\",\r\n" +
+            "        \"latitude\": 40.706241,\r\n" +
+            "        \"longitude\":-74.011284,\r\n" +
+            "        \"status\": \"UPLOADING\"\r\n" +
+            "    },\r\n" +
+            "    {\r\n" +
+            "        \"id\": \"505dd44d-df76-4cab-9f07-0a692f0e51e2\",\r\n" +
+            "        \"name\": \"Untitled\",\r\n" +
+            "        \"title\": \"Farmingdale\",\r\n" +
+            "        \"latitude\":40.722294,\r\n" +
+            "        \"longitude\": -73.418101,\r\n" +
+            "        \"status\": \"UPLOADING\"\r\n" +
+            "    },\r\n" +
+             "    {\r\n" +
+            "        \"id\": \"505dd44d-df76-4cab-9f07-0a692f0e51e2\",\r\n" +
+            "        \"name\": \"Untitled\",\r\n" +
+            "        \"title\": \"Whitestone\",\r\n" +
+            "        \"latitude\":  40.789146,\r\n" +
+            "        \"longitude\":-73.814068,\r\n" +
+            "        \"status\": \"UPLOADING\"\r\n" +
+            "    },\r\n" +
+            "    {\r\n" +
+            "        \"id\": \"505dd44d-df76-4cab-9f07-0a692f0e51e2\",\r\n" +
+            "        \"name\": \"Untitled\",\r\n" +
+            "        \"title\": \"Stamford\",\r\n" +
+            "        \"latitude\": 41.090444,\r\n" +
+            "        \"longitude\": -73.515406,\r\n" +
+            "        \"status\": \"UPLOADING\"\r\n" +
+            "    },\r\n" +
+             "    {\r\n" +
+            "        \"id\": \"505dd44d-df76-4cab-9f07-0a692f0e51e2\",\r\n" +
+            "        \"name\": \"Untitled\",\r\n" +
             "        \"title\": \"Landing\",\r\n" +
             "        \"latitude\": 35.8439646,\r\n" +
             "        \"longitude\": -78.7854862,\r\n" +
@@ -55,33 +103,9 @@ namespace MUDDYBOOTS
             "    {\r\n" +
             "        \"id\": \"505dd44d-df76-4cab-9f07-0a692f0e51e2\",\r\n" +
             "        \"name\": \"Untitled\",\r\n" +
-            "        \"title\": \"Boston\",\r\n" +
-            "        \"latitude\": 42.21,\r\n" +
-            "        \"longitude\": -71.3854862,\r\n" +
-            "        \"status\": \"UPLOADING\"\r\n" +
-            "    },\r\n" +
-            "    {\r\n" +
-            "        \"id\": \"505dd44d-df76-4cab-9f07-0a692f0e51e2\",\r\n" +
-            "        \"name\": \"Untitled\",\r\n" +
-            "        \"title\": \"Denver\",\r\n" +
-            "        \"latitude\": 39.8439646,\r\n" +
-            "        \"longitude\": -105.7854862,\r\n" +
-            "        \"status\": \"UPLOADING\"\r\n" +
-            "    },\r\n" +
-             "    {\r\n" +
-            "        \"id\": \"505dd44d-df76-4cab-9f07-0a692f0e51e2\",\r\n" +
-            "        \"name\": \"Untitled\",\r\n" +
-            "        \"title\": \"Cheyenne\",\r\n" +
-            "        \"latitude\": 41.8439646,\r\n" +
-            "        \"longitude\": -104.7854862,\r\n" +
-            "        \"status\": \"UPLOADING\"\r\n" +
-            "    },\r\n" +
-            "    {\r\n" +
-            "        \"id\": \"505dd44d-df76-4cab-9f07-0a692f0e51e2\",\r\n" +
-            "        \"name\": \"Untitled\",\r\n" +
-            "        \"title\": \"Calgary\",\r\n" +
-            "        \"latitude\": 51.8439646,\r\n" +
-            "        \"longitude\": -114.7254862,\r\n" +
+            "        \"title\": \"New York\",\r\n" +
+            "        \"latitude\": 40.753072,\r\n" +
+            "        \"longitude\": -73.997575,\r\n" +
             "        \"status\": \"UPLOADING\"\r\n" +
             "    },\r\n" +
             "    {\r\n" +
@@ -111,25 +135,9 @@ namespace MUDDYBOOTS
             "    {\r\n" +
             "        \"id\": \"505dd44d-df76-4cab-9f07-0a692f0e51e2\",\r\n" +
             "        \"name\": \"Untitled\",\r\n" +
-            "        \"title\": \"Detroit\",\r\n" +
-            "        \"latitude\": 42.8439646,\r\n" +
-            "        \"longitude\": -83.7254862,\r\n" +
-            "        \"status\": \"UPLOADING\"\r\n" +
-            "    },\r\n" +
-            "    {\r\n" +
-            "        \"id\": \"505dd44d-df76-4cab-9f07-0a692f0e51e2\",\r\n" +
-            "        \"name\": \"Untitled\",\r\n" +
             "        \"title\": \"Chicago\",\r\n" +
             "        \"latitude\": 42.8439646,\r\n" +
             "        \"longitude\": -81.7854862,\r\n" +
-            "        \"status\": \"UPLOADING\"\r\n" +
-            "    },\r\n" +
-            "    {\r\n" +
-            "        \"id\": \"505dd44d-df76-4cab-9f07-0a692f0e51e2\",\r\n" +
-            "        \"name\": \"Untitled\",\r\n" +
-            "        \"title\": \"Columbus\",\r\n" +
-            "        \"latitude\": 42.8439646,\r\n" +
-            "        \"longitude\": -83.7854862,\r\n" +
             "        \"status\": \"UPLOADING\"\r\n" +
             "    },\r\n" +
             "    {\r\n" +

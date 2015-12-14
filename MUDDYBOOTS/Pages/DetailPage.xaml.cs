@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+﻿
 using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Core;
-using Windows.UI.Popups;
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Maps;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using MUDDYBOOTS.Model;
 using Windows.Devices.Geolocation;
@@ -36,7 +25,7 @@ namespace MUDDYBOOTS.Pages
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
             currentView.BackRequested += backButton_Tapped;
-            myMap.Style = MapStyle.Road;
+            DetailMap.Style = MapStyle.Road;
         }
         private void backButton_Tapped(object sender, BackRequestedEventArgs e)
         {
@@ -65,11 +54,11 @@ namespace MUDDYBOOTS.Pages
             POI.Location = snPoint;
             POI.NormalizedAnchorPoint = new Point(0.5, 1.0);
             POI.Title = user.title;
-            POI.ZIndex = 0;           
+              
             // Center the map over the POI.
-            myMap.MapElements.Add(POI);
-            myMap.Center = snPoint;
-            myMap.ZoomLevel = 4;
+            DetailMap.MapElements.Add(POI);
+            DetailMap.Center = snPoint;
+            DetailMap.ZoomLevel = 10;
 
         }
     }

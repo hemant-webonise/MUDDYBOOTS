@@ -47,7 +47,7 @@ namespace MUDDYBOOTS
                 MessageDialog messageDialog = new MessageDialog("Login UnSuccessful");
                 await messageDialog.ShowAsync();
                 /*Remove this code - Testing purpose*/
-                Frame.Navigate(typeof(WelcomePage), Auth_token);
+                Frame.Navigate(typeof(LoginPage), Auth_token);
             }
 
             Log.Content = pref.Auth_token;
